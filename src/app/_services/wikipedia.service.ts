@@ -1,12 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { runInThisContext } from 'vm';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WikipediaService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   public onSearch(search: string) {
-    console.log('response is : ' + search);
+    return this.http.get('');
   }
 }
