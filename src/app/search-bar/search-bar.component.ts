@@ -15,6 +15,8 @@ export class SearchBarComponent implements OnInit {
   onSubmit(event: any) {
     console.log(event);
     console.log(this.term);
+
+    //prevent from refresh page when you enter a word
     event.preventDefault();
     this.onSearch.emit(this.term);
   }
