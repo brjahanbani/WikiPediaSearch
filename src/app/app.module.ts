@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { PageListComponent } from './page-list/page-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, PageListComponent],
+  declarations: [AppComponent, SearchBarComponent, PageListComponent, RxjsLearningComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
