@@ -16,13 +16,20 @@ export class CountComponent implements OnInit {
       let count = 0;
       setInterval(() => {
         observer.next(++count);
+        if (count === 5) {
+          observer.error(new Error('Count reached 5'));
+        }
+        //it will be completed before 6 (because of error)
+        if (count === 6) {
+          observer.complete();
+        }
       }, 1000);
     });
 
     this.sub = obs.subscribe(
       (count) => console.log(count),
       (error) => {
-        console.log(error);
+        console.log('Error would be : ' + error);
       },
       () => {
         console.log('done');
