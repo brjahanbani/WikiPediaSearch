@@ -10,9 +10,10 @@ import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
 import { CountComponent } from './count/count.component';
 import { HotColdUnicastMulicastComponent } from './hot-cold-unicast-mulicast/hot-cold-unicast-mulicast.component';
 import { SubjectComponent } from './subject/subject.component';
+import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, PageListComponent, RxjsLearningComponent, CountComponent, HotColdUnicastMulicastComponent, SubjectComponent],
+  declarations: [AppComponent, SearchBarComponent, PageListComponent, RxjsLearningComponent, CountComponent, HotColdUnicastMulicastComponent, SubjectComponent, BehaviorSubjectComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
