@@ -8,9 +8,10 @@ import { PageListComponent } from './page-list/page-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
 import { CountComponent } from './count/count.component';
+import { HotColdUnicastMulicastComponent } from './hot-cold-unicast-mulicast/hot-cold-unicast-mulicast.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, PageListComponent, RxjsLearningComponent, CountComponent],
+  declarations: [AppComponent, SearchBarComponent, PageListComponent, RxjsLearningComponent, CountComponent, HotColdUnicastMulicastComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
