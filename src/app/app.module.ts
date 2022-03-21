@@ -13,9 +13,10 @@ import { SubjectComponent } from './subject/subject.component';
 import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
+import { OperatorsComponent } from './operators/operators.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, PageListComponent, RxjsLearningComponent, CountComponent, HotColdUnicastMulicastComponent, SubjectComponent, BehaviorSubjectComponent, ReplaySubjectComponent, AsyncSubjectComponent],
+  declarations: [AppComponent, SearchBarComponent, PageListComponent, RxjsLearningComponent, CountComponent, HotColdUnicastMulicastComponent, SubjectComponent, BehaviorSubjectComponent, ReplaySubjectComponent, AsyncSubjectComponent, OperatorsComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
