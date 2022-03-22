@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, from } from 'rxjs';
-import { map, pluck } from 'rxjs/operators';
+import { Observable, from, Subject } from 'rxjs';
+import { map, pluck, skipUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-operators',
@@ -27,5 +27,19 @@ export class OperatorsComponent implements OnInit {
       .subscribe((data) => {
         console.log(data);
       });
+
+    //skipUntil
+    const observableOne = new Observable((observer) => {
+      let i = 1;
+      setInterval(() => {
+        observer.next(i++);
+      }, 1000);
+    });
+    const observableTwo = new Subject();
+    setTimeout(() => {
+      observableTwo.next('hi');
+    }, 3000);
+    const newObse = observableOne.pipe(skipUntil(observableTwo));
+    newObse.subscribe(console.log);
   }
 }
