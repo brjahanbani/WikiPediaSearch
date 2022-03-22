@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-type NewType = any;
+import { Post } from '../_services/wikipedia.service';
 
 @Component({
   selector: 'app-page-list',
@@ -8,7 +7,7 @@ type NewType = any;
   styleUrls: ['./page-list.component.css'],
 })
 export class PageListComponent implements OnInit {
-  @Input() posts: NewType = [];
+  @Input() posts: Post[] = [];
 
   constructor() {}
 
